@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+}
+header {
+    background-color: #f8f9fa;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.right-column {
+    column-gap: 10px;
+}
+
+/* circle around each icon */
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #222;              /* ensures SVG lines are visible */
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
+}
+
+/* ensure the SVGs fit and inherit the color */
+.icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  display: block;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 380px;  /* left and right columns */
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Header spans both columns but we’ll align the title to the left column grid line */
+header {
+  grid-column: 1 / -1; /* makes header span both columns */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Align the brand to left column edge */
+.brand {
+  grid-column: 1 / 2; /* align with left column grid start */
+  font-family: "Brush Script MT", cursive;
+  font-size: 48px;
+  margin: 0;            /* remove default h1 margins */
+}
+
+/* Optional: make sure h1 itself has no weird margin */
+.brand h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Left and right columns */
+main {
+  display: contents; /* allows .left-col and .right-col to align in the grid directly */
+}
+
+.left-col {
+  grid-column: 1 / 2;
+}
+
+.right-col {
+  grid-column: 2 / 3;
+}
