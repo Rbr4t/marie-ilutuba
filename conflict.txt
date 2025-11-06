@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 real    0m0.131s
 user    0m0.061s
 sys     0m0.076s
-=======
 Ma olen <tartu ülikoolis. bla bla bla
 Tere!!!
 Olen 63
->>>>>>> Karel
